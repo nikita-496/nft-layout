@@ -1,1 +1,1 @@
-import './sass/_global.sass';
+import './sass/styles.sass';
