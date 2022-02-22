@@ -1,9 +1,31 @@
+@use '_global'
+
+@use '../blocks/search-form/search-form'
+@use '../blocks/button/button'
+@use '../blocks/header/header'
+@use '../blocks/hero/hero'
+@use '../blocks/link/link'
+@use '../blocks/menu/menu'
+@use '../blocks/logo/logo'
+@use '../blocks/content/content'
+@use '../blocks/item-header/item-header'
+@use '../blocks/cards/cards'
+@use '../blocks/card/card'
+@use '../blocks/select/select'
+
+@use'../blocks/page/page'
+
+
+
 @import '~normalize.css'
 @import '_media'
 
 :root
+  font-family: global.$primaryFont
   box-sizing: border-box
 *,
 *::before,
 *:after
   box-sizing: inherit
+
+

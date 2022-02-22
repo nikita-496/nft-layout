@@ -1,12 +1,17 @@
 @use '_global'
 
+//fonts
+@media (min-width: global.$mobile)
+  :root
+   font-size: calc(0.55em + 1vw)
+
 @media (min-width: global.$xs)
   :root
-   font-size: calc(0.5em + 1vw)
+   font-size: calc(0.3em + 1vw)
 
 @media (min-width: global.$sm)
   :root
-   font-size: calc(0.5em + 1vw)
+   font-size: calc(0.2em + 1vw)
 
 @media (min-width: global.$md)
   :root
@@ -14,9 +19,14 @@
 
 @media (min-width: global.$lg)
   :root
-   font-size: calc(0.146em + 1vw)
+   font-size: calc(0.1em + 1vw)
 
 @media (min-width: global.$xl)
- :root
-   font-size: calc(0.05em + 1vw)
-
+  :root
+   font-size: calc(1vw - 0.08em)
+  
+@media (max-width: global.$sm)
+  .container  
+    margin: 0em
+    padding-left: 20px
+    padding-right: 20px
