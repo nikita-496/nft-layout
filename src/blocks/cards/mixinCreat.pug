@@ -1,0 +1,30 @@
+mixin creat(title, text, images)
+    +itemHeader(title, text)
+      .item-header__description
+         .item-header__title-group.item-header__title-group_theme_creat
+            h2.item-header__title.item-header__title_decorated= title
+            +img('item-header__img', images.decoration)
+         p.item-header__text.item-header__text_theme_creat= text
+
+    .cards__content 
+      +content()  
+        ul.content__list
+          - for(let i = 0; i < 8; i++)
+              li.content__list-item
+                +card('size_middle')
+                  +img('card__icon-ellipse', images.ellipse)
+                  if i == 6
+                    +img('card__icon', images.icon[1])
+                  else if i == 7
+                    +img('card__icon', images.icon[5])
+                  else 
+                    +img('card__icon', images.icon[i])
+                  .content__description   
+                    - const title= ['Set Up Your Wallet', 'List Them of Sale', 'Create your Collection', 'Add Your NFTs']
+                    if i >= 4
+                      span.content__title-description= title[0]
+                    else 
+                      span.content__title-description= title[i]
+                    span.content__text-description= 'All the Lorem Ipsum generators repeat predefined chunks as this the first true generator the Internet'
+                    .content__button
+                      +button(undefined, 'shape_rectangle')

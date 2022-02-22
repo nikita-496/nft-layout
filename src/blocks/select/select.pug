@@ -1,0 +1,8 @@
+mixin select(selectName, options)
+  include ../../pug/_store.pug
+  .select
+      button.select__toggle(type='button', name='options', value=selectName, data-select='toggle', data-index='-1')=selectName
+      .select__dropdown
+        ul.select__options
+              each option, index in options
+               li.select__option(data-select='option', data-value=option.toLowerCase(), data-index=index)= option

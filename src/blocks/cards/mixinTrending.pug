@@ -1,0 +1,28 @@
+mixin trending(title, text, images)
+    +itemHeader(title, text)
+      .item-header__description
+         .item-header__title-group_theme_trending
+            h2.item-header__title.item-header__title_decorated= title
+            +img('item-header__img', images.decoration)
+         p.item-header__text.item-header__text_theme_trending= text
+      .item-header__select  
+        +select('Category', ['Games', 'View', 'Music'])
+
+    .cards__content 
+      +content()  
+        ul.content__list
+          each cover, index in images.cardCover
+            li.content__list-item
+             +card('theme_trending', index)
+              +img('card__cover-trending', cover)
+              +img(`card__avatar-${index + 1}`, images.avatar[index])
+              .card__info
+                if index == 0
+                  span.card__title.card__title_theme_trending NFT 3D Games in Pro
+                else if index == 1 
+                  span.card__title.card__title_theme_trending Amaging Music Head
+                else if index == 2
+                  span.card__title.card__title_theme_trending NFT Wallet Of
+                else 
+                 span.card__title.card__title_theme_trending NFT 3D Games in Pro
+                span.card__subtitle.card__subtitle_theme_trending By Amilan ngsi

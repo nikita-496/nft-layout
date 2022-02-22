@@ -1,0 +1,5 @@
+mixin link(name, cls=underfined)
+  if cls
+    a(class=`link__${cls}`, href="#")= name 
+  else 
+    a.link(href="#")= name 

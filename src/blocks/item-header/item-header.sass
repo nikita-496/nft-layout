@@ -1,0 +1,63 @@
+@use '../../sass/_global'
+
+.item-header
+  display: flex
+  margin-bottom: 3em
+
+.item-header__title
+  font-size: 2rem
+  line-height: 50px
+
+  margin-top: 0em
+
+  color: global.$blueGray
+
+.item-header__text
+  display: block
+  font-size: 1rem
+  font-family: global.$secondFont
+  line-height: 30px
+
+  margin: 0em
+
+  color: global.$gray
+
+.item-header__text_theme_assets
+  width: 29em
+
+.item-header__text_theme_trending
+  font-size: 1.2rem
+  width: 24em
+
+.item-header__text_theme_sellers
+  font-size: 1.2rem
+  width: 22em
+  color: global.$white
+
+.item-header__text_theme_creat
+  font-size: 1.2rem
+  font-family: global.$montserrat400
+  width: 30em
+  color: global.$white
+
+.item-header__text_theme_product
+  font-family: global.$montserrat400
+  width: 35em
+  color: global.$white
+
+.item-header__text_theme_collection
+  font-size: 1.2rem
+  font-family: global.$montserrat400
+  width: 31em
+  color: global.$white
+
+@import '__title-group/item-header__title-group'
+@import '__title-group/_theme/item-header__title-group_theme_assets'
+@import '__title-group/_theme/item-header__title-group_theme_trending'
+@import '__title-group/_theme/item-header__title-group_theme_sellers'
+@import '__title-group/_theme/item-header__title-group_theme_creat'
+@import '__menu/item-header__menu'
+@import '__select/item-header__select'
+@import '__button/item-header__button'
+
+

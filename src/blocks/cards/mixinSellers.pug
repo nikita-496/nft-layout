@@ -1,0 +1,55 @@
+mixin sellers(title, text, images)
+    +itemHeader(title, text)
+      .item-header__description
+         .item-header__title-group.item-header__title-group_theme_sellers
+            h2.item-header__title.item-header__title_decorated= title
+            +img('item-header__img', images.decoration)
+         p.item-header__text.item-header__text_theme_sellers= text
+      .item-header__select  
+        +select('Last 7 days', ['Last days', 'Last month', 'Last 14 days'])
+
+    .cards__content 
+      +content()  
+        ul.content__list
+         - for (let i = 1; i <= 3; i++)
+             li.content__list-item.content__list-item_theme_sellers
+              +card('sellers')
+                ul.content__inner-list 
+                      if i == 1 
+                        - for (let k = 0; k < 5; k++)
+                         li.content__inner-list-item
+                          +card()
+                              .content__inner
+                                +img('content__avatar', images.avatar[k])
+                                .content__inner-description
+                                    span.content__inner-title Cryptopunka
+                                    .content__inner-subtitle 
+                                      +img('content__inner-subtitle-img', images.crypto)
+                                      span.content__inner-subtitle-text 1023,454.23
+                                span.content__inner-title-percent +153.37%
+                      
+                      else if i == 2 
+                        - for (let k = 5; k < 10; k++)
+                         li.content__inner-list-item
+                          +card()
+                              .content__inner
+                                +img('content__avatar', images.avatar[k])
+                                .content__inner-description
+                                  span.content__inner-title Cryptopunka
+                                  .content__inner-subtitle 
+                                    +img('content__inner-subtitle-img', images.crypto)
+                                    span.content__inner-subtitle-text 1023,454.23
+                                span.content__inner-title-percent +153.37%                            
+
+                      else if i == 3 
+                         - for (let k = 10; k < 15; k++)
+                          li.content__inner-list-item
+                            +card()
+                                .content__inner
+                                  +img('content__avatar', images.avatar[k])
+                                  .content__inner-description
+                                    span.content__inner-title Cryptopunka
+                                    .content__inner-subtitle 
+                                      +img('content__inner-subtitle-img', images.crypto)
+                                      span.content__inner-subtitle-text 1023,454.23
+                                  span.content__inner-title-percent +153.37%

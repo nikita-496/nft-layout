@@ -1,0 +1,32 @@
+mixin productLive(title, text, images)
+  +itemHeader(title, text, 'theme_product')
+  .cards__content 
+    +content()  
+      ul.content__list
+        each cover, index in images.cardCover
+          li.content__list-item
+            +card('size_middle')
+              +img('card__cover-products', cover)
+              .content__description 
+                .content__date
+                  - const dateFormat = [ {count: '20', measure: 'D'}, {count: '45', measure: 'H'}, {count: '55', measure: 'M'}, {count: '05', measure: 'S'} ] 
+                  - let i = 0 
+                  ul.content__date-list 
+                    while i < dateFormat.length
+                      li.content__date-list-item
+                        span.content__date-count= dateFormat[i].count 
+                        span.content__date-measure= dateFormat[i].measure
+                      - i++  
+                span.content__description-title Golden Color Shape
+
+                .content__description-subtitle-group
+                  span.content__description-subtitle-text Open For bid 1/10
+                  .content__description-subtitle-item
+                    +img('content__icon-crypto', images.icon)
+                    span.content__description-value 5.99 ETH
+                
+                .content__action 
+                  +button(['Place Bid'], 'shape_rectangle-sm')
+                  .content__action-icon-group
+                    +img('content__icon-share', images.iconShare)
+                    +img('content__icon-star', images.iconStar)

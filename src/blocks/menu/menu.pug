@@ -1,0 +1,31 @@
+
+mixin menu(items, mix = underfined, modificator = underfined)
+  if mix == 'header' 
+    div(class=`menu ${mix}__menu`)
+     .menu__burger   
+        span.menu__burger-icon
+     nav.menu__nav
+      ul.menu__list
+        each item in items 
+          if modificator
+            li(class=`menu__item menu__item_${modificator}`)
+              +link(item, mix)
+          else 
+            li.menu__item
+              +link(item, mix)
+      if block  
+        block 
+     script 
+      include menu.js  
+      
+  else
+    div(class=`menu`)
+      ul(class=`menu__list menu__list_theme_cards`)
+        each item in items 
+          if modificator
+            .menu__item-cards-wrapper
+              li(class=`menu__item-cards menu__item-cards_${modificator}`)
+                +link(item, mix)
+          else 
+            li.menu__item
+              +link(item, mix)

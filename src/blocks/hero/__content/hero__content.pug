@@ -1,0 +1,12 @@
+mixin heroContent(images)
+  .hero__content  
+    +content()
+        - const title = 'Discover Collect And Sell Extraordinary NFT'
+        - const text = 'Het heeft niet alleen vijf eeuwen overleefd maar is ook, vrijwel <br>onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren'
+        .content__description-group
+          h1.content__title-hero= title
+          span.content__text-hero  Het heeft niet alleen vijf eeuwen overleefd maar is ook, vrijwel #[<br>] onveranderd, overgenomen in elektronische #[<br>] letterzetting. Het is in de jaren
+          .content__buttons-hero
+            +button( ['Explore More'], 'shape_rectangle')
+            +button( ['Connect Wallet'], 'shape_rectangle')
+        +img('content__img-item', images)

@@ -1,0 +1,15 @@
+mixin page()
+ include ../../pug/_store.pug
+  body.page
+    .page__header  
+      +header(images.LOGO)
+    section.page__hero
+      +hero(images.HERO)
+    main.page__main
+      +main()
+    footer.page__footer
+      +footer(images.LOGO_LARGE, images.SOCIAL)
+    script  
+      include ../header/header.js
+    script
+      include ../select/select.js

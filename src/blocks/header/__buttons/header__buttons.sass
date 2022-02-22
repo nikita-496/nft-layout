@@ -1,0 +1,12 @@
+@use '../../../sass/_global'
+@import '../../../sass/_mixins'
+
+.header__buttons
+  display: flex
+  flex: 1
+  margin-left: 3em
+  
+  &>.button_shape_circle:not(:first-child) 
+    margin-left: 1rem
+  &>.button_shape_circle  
+    include btnPadding

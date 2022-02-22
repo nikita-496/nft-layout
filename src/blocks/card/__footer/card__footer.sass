@@ -1,0 +1,38 @@
+@use '../../../sass/_global'
+
+.card__footer
+  display: flex
+  flex-direction: column
+  margin-top: 0.5em
+  margin-left: 0.5em
+
+.card__footer-title
+  font-size: 1rem
+  font-family: global.$montserrat500
+
+  margin-bottom: 1em
+
+  color: global.$white
+
+.card__footer-title_active
+  font-size: 1.5rem
+
+  margin-bottom: 0.667em
+
+  color: global.$primaryTheme
+  
+
+.card__footer-button
+  &>.button_shape_circle
+    margin-bottom: 1em
+    padding: 0.5em 5.55em
+
+.card__footer-social
+  margin-bottom: 1em
+  &>.card__footer-social-img
+    width: 2em
+  &>.card__footer-social-img:first-child
+    margin-left: 0.65em
+
+  &>.card__footer-social-img:not(:first-child)
+    margin-left: 1.5em

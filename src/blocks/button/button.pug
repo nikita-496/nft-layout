@@ -1,0 +1,13 @@
+mixin button(nameItems, modificator, additionalModificator) 
+  if !nameItems
+      button(class=`button button_${modificator}`)
+          a.button__link(href="") 
+  else if modificator && !additionalModificator
+    each name in nameItems
+      button(class=`button button_${modificator}`)= name
+  else if additionalModificator
+    each name in nameItems
+      button(class=`button button_${modificator} button_${additionalModificator}`)= name
+  else 
+    each name in nameItems
+      button(class=`button`)= name

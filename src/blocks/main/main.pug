@@ -1,0 +1,33 @@
+mixin main()
+  include ../../pug/_store.pug
+    .container
+      section.page__main-section
+        - const titleAssets= 'NFT Assets Itam'
+        - const textAssets= 'kundi nalagpasan din nito ang paglaganap ng electronic typesetting at nanatiling parehas Sumikat ito noong 1960s kasabay ng pag labas ng Letraset...'
+        - const srcAssets= { decoration: images.TITLE_DECORATION, cardCover: images.NFT_ITEM_COVER, avatar: images.NFT_ITEM_AVATAR, social: images.SOCIAL}
+        +cards(titleAssets, textAssets, srcAssets)
+      section.page__main-section
+        - const titleTranding= 'Trending In Category'
+        - const textTranding= 'when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five'
+        - const srcTranding= { decoration: images.TITLE_DECORATION, cardCover: images.TRENDING_COVER, avatar: images.TRENDING_AVATAR}
+        +cards(titleTranding, textTranding, srcTranding)
+      section.page__main-section
+        - const titleSellers= 'Top Sellers'
+        - const textSellers= 'It has survived not only five centuries, but also he leap into electronic typesetting remaining essentially uncha'
+        - const srcSellers= { decoration: images.TITLE_DECORATION, avatar: images.SELLERS_AVATAR, crypto: images.SELLERS__CRYPTO}
+        +cards(titleSellers, textSellers, srcSellers)
+      section.page__main-section
+        - const titleCreat= 'Creat And Sall Your NFTs'
+        - const textCreat= 'from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the ndoubtable source...'
+        - const srcCreat= { decoration: images.TITLE_DECORATION, icon: images.CREATE, ellipse: images.ELLIPSE}
+        +cards(titleCreat, textCreat, srcCreat)
+      section.page__main-section
+       - const titleProductLive= 'NFT Products Live Action'
+       - const textProductLive= 'when an unknown printer took a galley of type and scrambled it to make a type specimen book . It has survived not only five but also the leap into electronic typesetting'
+       - const srcProductLive= {cardCover: images.PRODUCT_LIVE_COVER, icon: images.ICON_CRYPTO, iconShare: images.SHARE, iconStar: images.STAR}
+        +cards(titleProductLive, textProductLive, srcProductLive)
+      section.page__main-section
+        - const titleCollection= 'Start your own collection today'
+        - const textCollection = 'raroin is a shared liquidity NFT market smart contract which is used by multiple websites to provide the users the best possible experience.'
+        -const srcCollection= {icon: images.ICON_COLLECTION}
+         +cards(titleCollection, textCollection, srcCollection)

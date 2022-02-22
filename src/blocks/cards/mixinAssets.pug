@@ -1,0 +1,52 @@
+mixin assets(title, text, images)
+    +itemHeader(title, text)
+      .item-header__description
+        .item-header__title-group_theme_assets
+          h2.item-header__title.item-header__title_decorated= title
+          +img('item-header__img', images.decoration)
+        p.item-header__text.item-header__text_theme_assets= text
+      if title == 'NFT Assets Itam'
+        .item-header__menu
+          - const menuItem = ['All', 'Art', 'NFT', 'Music', 'Collectibles', 'Virtual Worlds']
+          +menu(menuItem, 'cards', 'decoration_none')
+
+    .cards__content 
+      +content()  
+        ul.content__list
+          each cover, index in images.cardCover
+            li.content__list-item
+
+             +card('size_middle')
+                +img('card__cover', cover)
+                .card__owner  
+                  +img('card__owner-avatar', images.avatar[index])
+                  +link('@Dwight Southerla', 'avatar')
+
+                if index == 0
+                  .card__tag 
+                    span.card__tag-text 202 ETH  
+                    span.card__tag-text Bid 302.21
+                .card__footer
+                  - const title = ['Painted man art', 'Earth 3D Design', 'Earth 3D Design', 'Become One With Nature', 'To Infinity And Beyond', 'Industrial Revolution', 'Earth 3D Design', 'Gold Man Statue']
+                  if index == 0
+                    span.card__footer-title.card__footer-title_active= title[index]
+                    .card__footer-social  
+                      each social in images.social
+                        +img('card__footer-social-img', social)
+                  else 
+                    span.card__footer-title= title[index]
+                    .card__footer-button
+                      +button(['Flow'], 'shape_circle')
+                      
+      if title == 'NFT Assets Itam'
+        +content()  
+          ul.content__list
+            - const titles= ['All tems', 'Art', 'Live Action', 'Collection']
+            - const subtitle= ['326412 B', '40230 K', '3215 K', '324.01 K']
+              each title, index in titles
+                li.content__list-item
+                  +card('size_middle')
+                      h4.card__title= title
+                      h4.card__subtitle= subtitle[index]
+                      - const btnTitle= ['Product', 'Art', 'Action', 'View']
+                      +button([btnTitle[index]], 'shape_rectangle-sm', 'theme_assets-card')

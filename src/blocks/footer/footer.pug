@@ -1,0 +1,33 @@
+mixin footer(images, social)
+  .container
+    .content__footer
+      .footer__logo 
+        +logo(images)
+        span.footer__logo-text when an unknown printer type and scrambled it type specimen book
+        .footer__group-social
+          each item in social   
+            +img('footer__group-social-item', item)
+      .footer__account 
+        span.footer__account-title My Account
+        ul.footer__account-list 
+         - const accountlistItems = ['Wallet', 'My Account', 'Create Item', 'Creator Dashdoard']
+         each item in accountlistItems
+          li.footer__account-list-item  
+            +link(item, 'footer') 
+      .footer__links 
+        span.footer__links-title Web Links
+        ul.footer__links-list 
+         - const linksListItems = ['Product Details', 'Rankings', 'Collections', 'User Profile']
+         each item in linksListItems
+          li.footer__links-list-item  
+            +link(item, 'footer') 
+      .footer__contacts
+        span.footer__contacts-title Contact
+        ul.footer__contacts-list 
+         - const contactsListItems = [{contact: 'Adress: ', value: 'Lalbag Road, Rangpur 5402'}, {contact: 'Phone: ', value: '333-222-2222'}, {contact: 'Email: ', value: 'Support@gmail.com'}]
+         each item in contactsListItems
+          li.footer__contacts-list-item  
+            span.footer__contacts-name= item.contact
+            span.footer__contacts-value= item.value
+
+    span.footer__coopyright Copyright © 2021. Created with love by OrdainIT

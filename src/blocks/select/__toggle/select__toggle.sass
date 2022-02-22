@@ -1,0 +1,38 @@
+@use '../../../sass/_global'
+
+.select__toggle
+  font-size: 1.2em
+
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  position: relative
+
+  width: 8em
+
+  border: none
+  border-radius: global.$lgRadius
+  
+  padding: 0.65em 1.35em 0.6em 1.2em
+ 
+  cursor: pointer
+  background-color: global.$primaryTheme
+  color: global.$white
+
+  &:after
+    display: block
+    content: ""
+    width: 1em
+    height: 0.6em
+    margin-left: 1em
+    background: url('../assets/images/down-arrow.png') no-repeat
+    position: absolute
+    right: 0.6em
+    bottom: 0.75em
+
+  &:hover
+    background-color: global.$primaryThemeHovered
+
+.select__label
+  margin-right: 1em

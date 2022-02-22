@@ -1,0 +1,39 @@
+.menu__burger
+  display: none
+@media(max-width: 540px) 
+  .menu__burger
+    display: block
+    position: absolute
+    top: 1.8em
+    right: 1.85em
+    z-index: 1000
+    width: 2em
+    height: 1.2em
+    cursor: pointer
+    
+    &>.menu__burger-icon,
+    &:before,
+    &:after
+      left: 0
+      position: absolute
+      height: 10%
+      width: 100%
+      transition: all 0.3s, ease 0s
+      background-color: #fff
+
+    &:before,
+    &:after
+      content: ""
+
+    &:before
+      top: 0
+    &:after
+      bottom: 0
+      
+  .menu__burger-icon
+    top: 50%
+    transform: scale(1) translate(0px, -50%)
+
+
+
+  

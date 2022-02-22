@@ -1,0 +1,22 @@
+@use '../../sass/_global'
+
+$placeholder-color: rgba(196, 207, 222, 1)
+
+.search-form
+  font-family: global.$montserrat400 
+  width: 10em
+  padding: 0.65em 0em 0.65em 1em 
+
+  background: rgba(52, 56, 66, 1)
+  border-radius: global.$lgRadius
+  border: none
+  outline: none
+  
+  &::-webkit-input-placeholder 
+    color:  $placeholder-color
+  &::-moz-placeholder 
+    color:  $placeholder-color
+  &::-moz-placeholder
+    color:  $placeholder-color
+  &::-ms-input-placeholder 
+    color:  $placeholder-color

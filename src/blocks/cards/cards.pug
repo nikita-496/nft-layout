@@ -1,0 +1,14 @@
+mixin cards(title, text, images)
+  .cards 
+   if title == 'NFT Assets Itam'
+    +assets(title, text, images)
+   else if title == 'Trending In Category'
+    +trending(title, text, images)
+   else if title == 'Top Sellers'
+    +sellers(title, text, images)
+   else if title == 'Creat And Sall Your NFTs'
+    +creat(title, text, images)
+   else if title == 'NFT Products Live Action'
+    +productLive(title, text, images)
+   else if title == 'Start your own collection today'
+    +collection(title, text, images)

@@ -1,0 +1,9 @@
+mixin itemHeader(title, text, modificator) 
+  .item-header
+    if block  
+      block
+    else 
+      .item-header__description
+        h2.item-header__title= title
+        p(class=`item-header__text item-header__text_${modificator}`)=text
+    

@@ -1,0 +1,15 @@
+mixin card(theme, index)
+  if index == 0 && !theme
+    //Обработать поведение элемента card_hovered через JS. Навесить ховер на все дочерние элементы
+    //через JS.
+    .card.card_hovered
+      if block 
+        block
+  else if theme 
+    div(class=`card card_${theme}`) 
+        if block 
+          block
+  else
+    .card 
+      if block 
+        block

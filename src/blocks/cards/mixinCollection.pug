@@ -1,0 +1,20 @@
+mixin collection(title, text, images)
+  +itemHeader(title, text)
+    .item-header__description
+        h2.item-header__title.item-header__title= title
+        p.item-header__text.item-header__text_theme_collection= text
+    .item-header__button  
+        +button(['Start Collection'], 'shape_circle')
+
+  .cards__content 
+      +content()  
+        ul.content__list
+          each icon, index in images.icon
+            li.content__list-item
+              +card('size_middle')
+                +img('card__img', icon)
+                .content__description   
+                  - const title= ['NFT', 'Token', 'Crypto', 'Figured', 'Bblockchain', 'Bitcoin', 'NFT Art', '3D Design']
+                    span.content__title-description_theme_collection= title[index]
+                    span.content__text-description_theme_collection= 'It is a long established factthat a reader will be...'
+              

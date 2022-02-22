@@ -1,0 +1,5 @@
+mixin headerMenu(links)
+  +menu(links, 'header', 'decoration_none')
+    .menu__buttons
+      - const name = ['Create', 'Connect Wallet']
+      +button(name, 'shape_circle')

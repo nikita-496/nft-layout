@@ -1,0 +1,8 @@
+mixin header(images) 
+  - const links = ['Home', 'Discover', 'Activity', 'Page', 'Contact Us']
+  - const name = ['Create', 'Connect Wallet']
+    header.header
+      .container.container_flexible
+        +headerLogo(images)
+        include ./__search/header__search.pug
+        +headerMenu(links) 

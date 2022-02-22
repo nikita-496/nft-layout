@@ -1,0 +1,18 @@
+@use '../../sass/_global.sass'
+
+.button
+ font-family: global.$montserrat500
+ color: global.$white
+ background: none
+
+ border: 1px solid global.$primaryTheme
+
+ &:hover 
+  cursor: pointer
+  background: global.$primaryTheme
+
+@import '_shape/button_shape_circle'
+@import '_shape/button_shape_rectangle'
+@import '_shape/button_shape_rectangle-sm'
+@import '_theme/button_theme_assets-card'
+@import '__link/button__link'

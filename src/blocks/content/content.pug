@@ -1,0 +1,7 @@
+mixin content(title = underfined, text  = underfined)
+  .content
+    if block  
+      block
+    else
+      h2.content__title= title 
+      span.content__text= text

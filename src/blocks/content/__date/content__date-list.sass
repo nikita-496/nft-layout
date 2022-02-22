@@ -1,0 +1,35 @@
+.content__date-list
+  //display: flex
+  //justify-content: space-between
+  //column-gap: 2.75em
+  position: relative
+  padding: 0em
+  padding-top: 0.5em
+  
+  &>.content__date-list-item:not(:first-child)
+    margin-left: 2em
+
+  &>.content__date-list-item:not(:last-child):before, 
+  &>.content__date-list-item:not(:last-child):after
+    content: "\25CF"
+    font-size: 0.8em
+    color: global.$primaryTheme
+    position: absolute
+  
+  &>.content__date-list-item:nth-child(1):before,
+  &>.content__date-list-item:nth-child(1):after
+    left: 2.8em 
+
+
+  &>.content__date-list-item:not(:last-child):before
+    top: 2.4em
+  &>.content__date-list-item:not(:last-child):after
+    bottom: 1.6em
+
+  &>.content__date-list-item:nth-child(2):before,
+  &>.content__date-list-item:nth-child(2):after
+    left: 7.3em 
+
+  &>.content__date-list-item:nth-child(3):before,
+  &>.content__date-list-item:nth-child(3):after
+    left: 11.8em 
