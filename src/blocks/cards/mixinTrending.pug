@@ -1,7 +1,7 @@
 mixin trending(title, text, images)
     +itemHeader(title, text)
       .item-header__description
-         .item-header__title-group_theme_trending
+         .item-header__title-group.item-header__title-group_theme_trending
             h2.item-header__title.item-header__title_decorated= title
             +img('item-header__img', images.decoration)
          p.item-header__text.item-header__text_theme_trending= text

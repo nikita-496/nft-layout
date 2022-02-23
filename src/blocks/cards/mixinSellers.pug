@@ -13,7 +13,7 @@ mixin sellers(title, text, images)
         ul.content__list
          - for (let i = 1; i <= 3; i++)
              li.content__list-item.content__list-item_theme_sellers
-              +card('sellers')
+              +card('theme_sellers')
                 ul.content__inner-list 
                       if i == 1 
                         - for (let k = 0; k < 5; k++)
