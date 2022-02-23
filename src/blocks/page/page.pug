@@ -9,7 +9,19 @@ mixin page()
       +main()
     footer.page__footer
       +footer(images.LOGO_LARGE, images.SOCIAL)
-    script  
-      include ../header/header.js
+    script
+      include ./page.js
+    script 
+      include ../../subModules/select/getSelectToggle.js
     script
       include ../select/select.js
+    script  
+      include ../../subModules/select/changeStateDropDown.js
+    script  
+      include ../../subModules/select/setOption.js
+    script  
+      include ../../subModules/select/setActiveClass.js
+    script  
+      include ../../subModules/select/updateSelectToggle.js
+    script  
+      include ./entry.js
