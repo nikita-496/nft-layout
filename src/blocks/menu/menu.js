@@ -1,6 +1,9 @@
-const nav = document.querySelector('.menu__nav');
-const burgerIcon = document.querySelector('.menu__burger');
-
-burgerIcon.addEventListener('click', () => {
-  nav.classList.toggle('menu__nav_mobile');
-});
+EntryPoint.menu = (function () {
+  function getMenuState() {
+    const menuIcon = document.querySelector('.menu__icon');
+    menuIcon.addEventListener('click', () => changeStateMenu(menuIcon));
+  }
+  return {
+    getMenuState,
+  };
+})();

@@ -11,10 +11,20 @@ mixin page()
       +footer(images.LOGO_LARGE, images.SOCIAL)
     script
       include ./page.js
+
+    script
+      include ../menu/menu.js
+
+    //headerMenu submodule
     script 
-      include ../../subModules/select/getSelectToggle.js
+      include ../../subModules/headerMenu/changeStateMenu.js
+
+
     script
       include ../select/select.js
+    //select submodule 
+    script 
+      include ../../subModules/select/getSelectToggle.js
     script  
       include ../../subModules/select/changeStateDropDown.js
     script  

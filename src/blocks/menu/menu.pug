@@ -2,8 +2,8 @@
 mixin menu(items, mix = underfined, modificator = underfined)
   if mix == 'header' 
     div(class=`menu ${mix}__menu`)
-     .menu__burger   
-        span.menu__burger-icon
+     .menu__icon
+        span.menu__icon-middle-line
      nav.menu__nav
       ul.menu__list
         each item in items 
@@ -15,9 +15,6 @@ mixin menu(items, mix = underfined, modificator = underfined)
               +link(item, mix)
       if block  
         block 
-     script 
-      include menu.js  
-      
   else
     div(class=`menu`)
       ul(class=`menu__list menu__list_theme_cards`)
